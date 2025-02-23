@@ -9,6 +9,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /App
 COPY --from=build App/out ./
 
-EXPOSE 8080
-ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 5000
+ENV ASPNETCORE_URLS=http://+:5000
 ENTRYPOINT ["dotnet", "TicTacToe.dll"]
